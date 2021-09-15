@@ -5,7 +5,7 @@ defmodule Gotcha.Player do
     field :avatar, :string
     field :email_address, :string
     field :name, :string
-    field(:password, :string, virtual: true)
+    field :password, :string, virtual: true
     field :password_hash, :string
 
     timestamps()
