@@ -14,8 +14,8 @@ defmodule Gotcha.Player do
   @doc false
   def changeset(player, attrs) do
     player
-    |> cast(attrs, [:avatar, :name, :email_address, :password_hash])
-    |> validate_required([:name, :email_address, :password_hash])
+    |> cast(attrs, [:avatar, :name, :email_address, :password])
+    |> validate_required([:name, :email_address, :password])
     |> hash_password
   end
 
