@@ -1,5 +1,5 @@
 defmodule Gotcha.Arena do
-  use Gotcha.Query
+  use Gotcha.Query, module: __MODULE__
 
   schema "arenas" do
     field :city, :string
@@ -41,7 +41,6 @@ defmodule Gotcha.Arena do
     |> validate_required([
       :location_name,
       :street_address1,
-      :street_address2,
       :city,
       :state,
       :zip_code,
