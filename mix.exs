@@ -33,6 +33,7 @@ defmodule Gotcha.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:absinthe_plug, "~> 1.5"},
       {:phoenix, "~> 1.5.12"},
       {:phoenix_ecto, "~> 4.4"},
       {:ecto, ">= 3.4.4 and < 3.4.5"},
