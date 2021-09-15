@@ -15,6 +15,14 @@ defmodule Gotcha.Arena do
   end
 
   def near(latitude, longitude, radius) do
+    radius_in_meters = Kernel.trunc(radius * 1609.34)
+    current_location = [latitude, longitude]
+
+    __MODULE__
+    |> Repo.all()
+    |> Enum.filter(fn arena ->
+      Geocalc.within?(radius_in_meters, current_location, [arena.latitude, arena.longitude])
+    end)
   end
 
   @doc false
