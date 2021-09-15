@@ -14,6 +14,9 @@ defmodule Gotcha.Arena do
     timestamps()
   end
 
+  def near(latitude, longitude, radius) do
+  end
+
   @doc false
   def changeset(arena, attrs) do
     arena
