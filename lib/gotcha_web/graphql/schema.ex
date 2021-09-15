@@ -3,7 +3,7 @@ defmodule GotchaWeb.GraphQL.Schema do
 
   alias GotchaWeb.GraphQL.Resolvers
 
-  import_types(Schema.Types)
+  import_types(GotchaWeb.GraphQL.Schema.Types)
 
   @desc "All queries that can be performed within Gotcha"
   query do
